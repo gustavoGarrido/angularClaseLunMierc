@@ -25,6 +25,14 @@ export class CrearUsuarioComponent implements OnInit {
 
   submit(){
     const value = this.formCrearUsuario.valid;
+    if(value){
+
+      //Enviar el formulario al backend
+    }
+    else{
+      console.log(this.formCrearUsuario.errors) //open componente muestra mensaje
+    }
+   
     // this.formCrearUsuario.get('apellido')?.setValue("Gonza")
 
     console.log(value)
