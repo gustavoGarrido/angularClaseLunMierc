@@ -14,4 +14,8 @@ export class UsuariosService {
   login(loginData:{}):any{
     return this.http.post(`${this.rutaApi}/users/login`,loginData,{})
   }
+
+  verificarToken(){
+    return this.http.get(`${this.rutaApi}/users/`)
+  }
 }

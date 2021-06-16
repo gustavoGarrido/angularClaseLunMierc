@@ -34,6 +34,12 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  verificarToken(){
+    this.usuariosService.verificarToken().subscribe(resp=>{
+      console.log(resp)
+    })
+  }
+
   ngOnInit(): void {
   }
 
