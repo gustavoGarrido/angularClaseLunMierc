@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsuariosModule } from './pages/usuarios/usuarios.module';
 import { CrearUsuarioModule } from './pages/crear-usuario/crear-usuario.module';
 import { LoginModule } from './pages/login/login.module';
+import { PaginaInicioModule } from './pages/pagina-inicio/pagina-inicio.module';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:"login",
     loadChildren: ()=> import('src/app/pages/login/login.module').then(m=>LoginModule)
+  },
+  {
+    path:"paginaInicio",
+    loadChildren: ()=> import('src/app/pages/pagina-inicio/pagina-inicio.module').then(m=>PaginaInicioModule)
   }
 ];
 

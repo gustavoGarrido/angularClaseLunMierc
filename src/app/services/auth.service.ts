@@ -10,8 +10,9 @@ export class AuthService {
 
   authState = new BehaviorSubject(false);
 
-  authenticate(){
-    this.authState.next(true)
+  authenticate(token:any){
+    this.authState.next(true);
+    localStorage.setItem("token", token)
   };
 
   isAuthenticate(){

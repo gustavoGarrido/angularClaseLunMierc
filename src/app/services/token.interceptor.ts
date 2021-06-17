@@ -35,19 +35,19 @@ export class TokenInterceptor implements HttpInterceptor {
     )
   }
 
-  private addToken(request: HttpRequest<any>, token:any){
-    if(token){
-      let clone = request.clone({
-        setHeaders: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
-        }
-      })
+  // private addToken(request: HttpRequest<any>, token:any){
+  //   if(token){
+  //     let clone = request.clone({
+  //       setHeaders: {
+  //         Accept: 'application/json',
+  //         'Content-Type': 'application/json',
+  //         Authorization: `Bearer ${token}`
+  //       }
+  //     })
 
-      return clone
-    }
+  //     return clone
+  //   }
 
-    return request
-  }
+  //   return request
+  // }
 }
