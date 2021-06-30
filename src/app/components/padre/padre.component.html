@@ -1,0 +1,5 @@
+<p>padre works!</p>
+
+<h4>Evento emitido desde hijo a padre: {{this.dato_desde_hijo_a_padre}}</h4>
+
+<app-hijo [id_producto]="this.id_producto_retorna_servicio" (propagar)="this.procesarPropagar($event)" ></app-hijo>

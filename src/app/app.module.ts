@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { NavbarModule } from './components/navbar/navbar.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './services/token.interceptor';
+import { PadreModule } from './components/padre/padre.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TokenInterceptor } from './services/token.interceptor';
     BrowserAnimationsModule,
     MatButtonModule,
     NavbarModule,
-    HttpClientModule
+    HttpClientModule,
+    PadreModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi:true},

@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router:Router, private authService:AuthService) { }
+  constructor(private router:Router, public authService:AuthService) { }
 
   irLogin(){
     this.router.navigate(['/login'])
@@ -17,6 +17,10 @@ export class NavbarComponent implements OnInit {
 
   irCrearUsuario(){
     this.router.navigate(['/crearUsuario'])
+  }
+
+  irUpdateUsuario(){
+    this.router.navigate(['/updateUsuario'])
   }
 
   back(){
