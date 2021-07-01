@@ -6,6 +6,9 @@ import { LoginModule } from './pages/login/login.module';
 import { PaginaInicioModule } from './pages/pagina-inicio/pagina-inicio.module';
 import { UpdateUsuarioModule } from './pages/update-usuario/update-usuario.module';
 import { AuthGuard } from './guards/auth.guard';
+import { PaginaEnviaModule } from './pages/pagina-envia/pagina-envia.module';
+import { PaginaRecibeModule } from './pages/pagina-recibe/pagina-recibe.module';
+import { EnviarImagenesModule } from './pages/enviar-imagenes/enviar-imagenes.module';
 
 const routes: Routes = [
   {
@@ -28,6 +31,21 @@ const routes: Routes = [
     path:"updateUsuario",
     loadChildren: ()=> import('src/app/pages/update-usuario/update-usuario.module').then(m=>UpdateUsuarioModule),
     canActivate:[AuthGuard]
+  },
+  {
+    path:"paginaEnvia",
+    loadChildren: ()=> import('src/app/pages/pagina-envia/pagina-envia.module').then(m=>PaginaEnviaModule),
+    // canActivate:[AuthGuard]
+  },
+  {
+    path:"paginaRecibe/:id_producto",
+    loadChildren: ()=> import('src/app/pages/pagina-recibe/pagina-recibe.module').then(m=>PaginaRecibeModule),
+    // canActivate:[AuthGuard]
+  },
+  {
+    path:"enviarImagenes",
+    loadChildren: ()=> import('src/app/pages/enviar-imagenes/enviar-imagenes.module').then(m=>EnviarImagenesModule),
+    // canActivate:[AuthGuard]
   }
 ];
 
