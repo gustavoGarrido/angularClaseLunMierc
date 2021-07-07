@@ -9,6 +9,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { PaginaEnviaModule } from './pages/pagina-envia/pagina-envia.module';
 import { PaginaRecibeModule } from './pages/pagina-recibe/pagina-recibe.module';
 import { EnviarImagenesModule } from './pages/enviar-imagenes/enviar-imagenes.module';
+import { PipePagesModule } from 'src/app/pages/pipe-pages/pipe-pages.module';
 
 const routes: Routes = [
   {
@@ -45,6 +46,11 @@ const routes: Routes = [
   {
     path:"enviarImagenes",
     loadChildren: ()=> import('src/app/pages/enviar-imagenes/enviar-imagenes.module').then(m=>EnviarImagenesModule),
+    // canActivate:[AuthGuard]
+  },
+  {
+    path:"pipePage",
+    loadChildren: ()=> import('src/app/pages/pipe-pages/pipe-pages.module').then(m=>PipePagesModule),
     // canActivate:[AuthGuard]
   }
 ];

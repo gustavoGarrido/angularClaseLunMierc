@@ -1,0 +1,17 @@
+<p>pipe-pages works!</p>
+
+<h3>fecha sin pipe: {{this.pipeDate}} // fecha con pipe: {{this.pipeDate | date: 'dd/MM/YYYY'}}</h3>
+<br>
+<h3>texto original: {{this.pipeUpper}} // texto con pipe: {{this.pipeUpper | uppercase}}</h3>
+<br>
+<h3>texto sin slice: {{this.pipeSlice}} // texto conn pipe: {{this.pipeSlice | slice:3}}</h3>
+<br>
+<h3>numero decimal: {{this.pipeNumber}} // numero con pipe: {{this.pipeNumber | number: '1.0-4'}}</h3>
+<br>
+<h3>numero sin pipe: {{this.pipeCurrency}}  // numero con pipe {{this.pipeCurrency | currency}}</h3>
+<br>
+<h3>fecha sin pipe: {{this.pipeDate}} // fecha con varios pipes: {{this.pipeDate | date:'fullDate' | uppercase}}</h3>
+<br>
+<h3>promesa sin pipe: {{this.valorPromesa}} // promesa con pipe {{this.valorPromesa | async}}</h3>
+<br>
+<h3>pipe sin personalizar {{this.pipePersonalizado}} // pipe personalizado: {{this.pipePersonalizado | estados}}</h3>
