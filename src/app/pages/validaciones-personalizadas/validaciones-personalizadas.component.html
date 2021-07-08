@@ -1,0 +1,8 @@
+<form [formGroup]="formValidaciones">
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Numero</mat-label>
+        <input matInput formControlName="numero">
+    </mat-form-field>
+
+    <button (click)="this.verResultado()">Ver resultado</button>
+</form>

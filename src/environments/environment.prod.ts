@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  rutaBackend:"http://localhost:3000",
+  timeOutBakend: 6000
 };

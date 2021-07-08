@@ -15,6 +15,13 @@ export class PipePagesComponent implements OnInit {
   pipeNumber = 3.141615;
   pipeCurrency = 30000;
   pipePersonalizado = 0;
+  pipePercent = 0.452;
+  pipeJson = {
+    nombre: "gustavo",
+    apellido: "ga"
+  }
+//json
+//percent
 
   valorPromesa = new Promise((resolve, reject)=>{
     setTimeout(()=>resolve('llego tarde'), 5000)

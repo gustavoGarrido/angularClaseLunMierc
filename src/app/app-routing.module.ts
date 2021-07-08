@@ -1,3 +1,4 @@
+import { ValidacionesPersonalizadasModule } from './pages/validaciones-personalizadas/validaciones-personalizadas.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsuariosModule } from './pages/usuarios/usuarios.module';
@@ -10,6 +11,7 @@ import { PaginaEnviaModule } from './pages/pagina-envia/pagina-envia.module';
 import { PaginaRecibeModule } from './pages/pagina-recibe/pagina-recibe.module';
 import { EnviarImagenesModule } from './pages/enviar-imagenes/enviar-imagenes.module';
 import { PipePagesModule } from 'src/app/pages/pipe-pages/pipe-pages.module';
+import { UsandoSpinnerModule } from './pages/usando-spinner/usando-spinner.module';
 
 const routes: Routes = [
   {
@@ -51,6 +53,16 @@ const routes: Routes = [
   {
     path:"pipePage",
     loadChildren: ()=> import('src/app/pages/pipe-pages/pipe-pages.module').then(m=>PipePagesModule),
+    // canActivate:[AuthGuard]
+  },
+  {
+    path:"valPersonalizadas",
+    loadChildren: ()=> import('src/app/pages/validaciones-personalizadas/validaciones-personalizadas.module').then(m=>ValidacionesPersonalizadasModule),
+    // canActivate:[AuthGuard]
+  },
+  {
+    path:"spinner",
+    loadChildren: ()=> import('src/app/pages/usando-spinner/usando-spinner.module').then(m=>UsandoSpinnerModule),
     // canActivate:[AuthGuard]
   }
 ];

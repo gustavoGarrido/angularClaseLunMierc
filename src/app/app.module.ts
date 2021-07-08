@@ -10,6 +10,7 @@ import { NavbarModule } from './components/navbar/navbar.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './services/token.interceptor';
 import { PadreModule } from './components/padre/padre.module';
+import { SpinnerModule } from './components/spinner/spinner.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PadreModule } from './components/padre/padre.module';
     MatButtonModule,
     NavbarModule,
     HttpClientModule,
-    PadreModule
+    PadreModule,
+    SpinnerModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi:true},
