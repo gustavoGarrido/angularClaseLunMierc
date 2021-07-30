@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { NotificacionesModule } from '../../models/notificaciones/notificaciones.module';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -20,7 +21,8 @@ import { NotificacionesModule } from '../../models/notificaciones/notificaciones
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    NotificacionesModule
+    NotificacionesModule,
+    MatCardModule
   ]
 })
 export class MaterialThemeModule { }

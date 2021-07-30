@@ -27,6 +27,15 @@ export class MaterialThemeComponent implements OnInit {
 
   }
 
+  datosBackend:any = []
+
+  traerUsuarios(){
+    this.datosBackend = [
+      {nombre:"gustavo", tipo_documento: "dni"},
+      {nombre:"ernesto", tipo_documento:"dni"}
+    ]
+  }
+
 
   ngOnInit(): void {
   }
