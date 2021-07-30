@@ -12,6 +12,7 @@ import { PaginaRecibeModule } from './pages/pagina-recibe/pagina-recibe.module';
 import { EnviarImagenesModule } from './pages/enviar-imagenes/enviar-imagenes.module';
 import { PipePagesModule } from 'src/app/pages/pipe-pages/pipe-pages.module';
 import { UsandoSpinnerModule } from './pages/usando-spinner/usando-spinner.module';
+import { MaterialThemeModule } from './pages/material-theme/material-theme.module';
 
 const routes: Routes = [
   {
@@ -63,6 +64,11 @@ const routes: Routes = [
   {
     path:"spinner",
     loadChildren: ()=> import('src/app/pages/usando-spinner/usando-spinner.module').then(m=>UsandoSpinnerModule),
+    // canActivate:[AuthGuard]
+  },
+  {
+    path:"material",
+    loadChildren: ()=> import('src/app/pages/material-theme/material-theme.module').then(m=>MaterialThemeModule),
     // canActivate:[AuthGuard]
   }
 ];
